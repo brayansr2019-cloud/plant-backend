@@ -25,6 +25,10 @@ const VALID_PLANTS = [
   "maguey_morado"
 ];
 
+app.get("/", (req, res) => {
+  res.send("Backend de Ixi Tzak funcionando");
+});
+
 app.post("/identify-plant", upload.single("image"), async (req, res) => {
   try {
     if (!req.file) {
